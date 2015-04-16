@@ -28,12 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 48F);
+            this.label1.Location = new System.Drawing.Point(128, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(244, 152);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "A";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(372, 152);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "Form1";
+            this.Opacity = 0.8D;
+            this.ShowInTaskbar = false;
+            this.Text = "KeyView";
+            this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.White;
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }
 
