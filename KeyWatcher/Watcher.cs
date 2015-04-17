@@ -23,9 +23,9 @@ namespace KeyWatcher
                     {
                         var inner = (KBDLLHOOKSTRUCT)x;
                         stateChanged(
-                            inner.vkCode, 
-                            (WM)wParam == WM.KEYDOWN || (WM)wParam == WM.SYSKEYDOWN || (lParam.flags & KBDLLHOOKSTRUCTFlags.LLKHF_ALTDOWN) == KBDLLHOOKSTRUCTFlags.LLKHF_ALTDOWN,
-                            (WM)wParam == WM.KEYUP || (WM)wParam == WM.SYSKEYUP || (lParam.flags & KBDLLHOOKSTRUCTFlags.LLKHF_UP) == KBDLLHOOKSTRUCTFlags.LLKHF_UP);
+                            inner.vkCode,
+                            (WM)wParam == WM.KEYDOWN || (WM)wParam == WM.SYSKEYDOWN,
+                            (WM)wParam == WM.KEYUP || (WM)wParam == WM.SYSKEYUP);
                     }, lParam);
                     
                     return UnsafeNativeMethods.CallNextHookEx(IntPtr.Zero, nCode, wParam, lParam); ;
